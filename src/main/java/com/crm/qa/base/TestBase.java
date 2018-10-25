@@ -6,12 +6,10 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import org.openqa.selenium.firefox.FirefoxDriver;
-
 
 import com.crm.qa.util.TestUtils;
 
@@ -24,7 +22,8 @@ public class TestBase {
 
 		try {
 			pr = new Properties();
-			FileInputStream fis = new FileInputStream("I:\\All Eclipse Code4\\POMMavenDemo\\src\\main\\java\\com\\crm\\qa\\config\\config.properties");
+			FileInputStream fis = new FileInputStream(
+					"I:\\All Eclipse Code4\\POMMavenDemo\\src\\main\\java\\com\\crm\\qa\\config\\config.properties");
 			pr.load(fis);
 
 		} catch (FileNotFoundException e) {
@@ -57,8 +56,8 @@ public class TestBase {
 	}
 
 	public static void main(String[] args) {
-		
-		TestBase tb= new TestBase();
+
+		TestBase tb = new TestBase();
 		initialization();
 	}
 
